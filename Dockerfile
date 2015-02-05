@@ -7,14 +7,14 @@ RUN apt-get update && apt-get install -y curl
 
 # Install docker in docker
 RUN curl https://get.docker.com/gpg | apt-key add -
-RUN echo deb https://get.docker.com/ubuntu docker main > /etc/apt/sources.list.d/docker.list
+RUN echo deb http://get.docker.com/ubuntu docker main > /etc/apt/sources.list.d/docker.list
 RUN apt-get update && apt-get install -y \
     ca-certificates \
     iptables \
     lxc \
     lxc-docker \
     openjdk-6-jdk \
-    git-core \
+    git-core 
  
 # Install jenkins, and spme nice plugins
 ENV JENKINS_HOME /jenkins/data/
