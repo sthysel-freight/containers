@@ -6,7 +6,7 @@ dawg.... heard you like docker, so we put docker in your docker.
 Why ?
 -----
 You want a CI environment that exercises your Docker based/backed projects, and of course you want 
-this in a Docker environment.
+this in a Docker environment, on your dev machine.
 
 
 Usage
