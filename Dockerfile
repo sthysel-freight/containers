@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
     openjdk-6-jdk \
     git-core 
  
-# Install jenkins, and spme nice plugins
+# Install jenkins, and some nice plugins
 ENV JENKINS_HOME /jenkins/data/
 ENV JENKINS_MIRROR http://mirrors.jenkins-ci.org
 
