@@ -13,7 +13,7 @@ $ fig up
 
 browse to http://localhost:8080/
 
-Setup the job, your repo should have a Dockerfile that specifies the build environment. Specify what you need to run. Below is a python example.
+Setup the job, your repo should have a Dockerfile that specifies the build environment. Specify what you need to run. Below is a python example. Better yet, use fig-test.yml or similar.
 
 ``` bash
 # The image to be used for this job
