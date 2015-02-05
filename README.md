@@ -7,35 +7,39 @@ Usage
 -----
 You have [docker](https://docs.docker.com/installation/) and [fig](http://www.fig.sh/install.html) [installed](https://github.com/muccg/ccg-devsetup) right ?
 
-    $ fig up
+``` bash
+$ fig up
+```
 
 browse to http://localhost:8080/
 
 Setup the job, your repo should have a Dockerfile that specifies the build environment. Specify what you need to run. Below is a python example.
 
-    # The image to be used for this job
-    IMAGE=$(docker build . | tail -1 | awk '{ print $NF }')
-    
-    # Build the directory to be mounted into Docker.
-    MNT="${WORKSPACE}/.."
-    
-    # Execute the build inside Docker.
-    CONTAINER=$(docker run -d -v "${MNT}:/opt/project" ${IMAGE} /bin/bash -c 'cd /workspace && python setup.py')
-    
-    # Attach to the container. You want to see the output.
-    docker attach ${CONTAINER}
-    
-    # Get the exit code as soon as the container stops.
-    RC=$(docker wait ${CONTAINER})
-    
-    # cleanup
-    docker rm $CONTAINER
-    
-    # Exit with the same value as that with which the process exited.
-    exit ${RC}
+``` bash
+# The image to be used for this job
+IMAGE=$(docker build . | tail -1 | awk '{ print $NF }')
 
+# Build the directory to be mounted into Docker.
+MNT="${WORKSPACE}/.."
+
+# Execute the build inside Docker.
+CONTAINER=$(docker run -d -v "${MNT}:/opt/project" ${IMAGE} /bin/bash -c 'cd /workspace && python setup.py')
+
+# Attach to the container. You want to see the output.
+docker attach ${CONTAINER}
+
+# Get the exit code as soon as the container stops.
+RC=$(docker wait ${CONTAINER})
+
+# cleanup
+docker rm $CONTAINER
+
+# Exit with the same value as that with which the process exited.
+exit ${RC}
+```
 
 Further reading
 ---------------
-https://github.com/jpetazzo/dind
+* http://dockerbook.com/
+* https://github.com/jpetazzo/dind
 
