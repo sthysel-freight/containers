@@ -1,4 +1,4 @@
-FROM ubuntu:14:04
+FROM ubuntu:14.04
 MAINTAINER sthysel@gmail.com
 
 ENV REFRESHED_AT 2015-02-05
