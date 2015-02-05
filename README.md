@@ -3,6 +3,12 @@ In which you find a Docker image, hosting Jenkins with docker
 
 dawg.... heard you like docker, so we put docker in your docker.
 
+Why ?
+-----
+You want a CI environment that exercises your Docker based/backed projects, and of course you want 
+this in a Docker environment.
+
+
 Usage
 -----
 You have [docker](https://docs.docker.com/installation/) and [fig](http://www.fig.sh/install.html) [installed](https://github.com/muccg/ccg-devsetup) right ?
