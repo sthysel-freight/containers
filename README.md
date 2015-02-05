@@ -38,7 +38,7 @@ docker attach ${CONTAINER}
 RC=$(docker wait ${CONTAINER})
 
 # cleanup
-docker rm $CONTAINER
+docker rm ${CONTAINER}
 
 # Exit with the same value as that with which the process exited.
 exit ${RC}
