@@ -3,3 +3,6 @@ terminalchat:
   name: terminalchat
   hostname: terminalchat
   privileged: true
+  ports:
+    -"55555"
+    -"55556"
