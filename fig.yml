@@ -6,3 +6,6 @@ terminalchat:
   ports:
     - "55555"
     - "55556"
+  environment:
+    - TERM=xterm-256color
+  command: /src/p2pvc/p2pvc 127.0.0.1 -v
