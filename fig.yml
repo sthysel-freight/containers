@@ -4,5 +4,5 @@ terminalchat:
   hostname: terminalchat
   privileged: true
   ports:
-    -"55555"
-    -"55556"
+    - "55555"
+    - "55556"
