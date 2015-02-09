@@ -1,0 +1,5 @@
+terminalchat:
+  build: .
+  name: terminalchat
+  hostname: terminalchat
+  privileged: true
