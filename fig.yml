@@ -1,0 +1,5 @@
+adssdr:
+  build: .
+  privileged: true
+  volumes:
+      - /dev/bus/usb:/dev/bus/usb
