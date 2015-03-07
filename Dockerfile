@@ -2,11 +2,6 @@ FROM ubuntu:latest
 MAINTAINER sthysel <sthysel@gmail.com>
 ENV REFRESHED_AT 2015-03-06
 
-ENV HOME /radioman
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US.UTF-8
-ENV LC_ALL en_US.UTF-8
-
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN sed 's/main$/main universe/' -i /etc/apt/sources.list
@@ -33,12 +28,12 @@ RUN git clone git://git.osmocom.org/rtl-sdr.git \
   && cd ./rtl-sdr \
   && mkdir build \
   && cd build \
-  && cmake ../ -DINSTALL_UDEV_RULES=ON \
+  && cmake ../ -DINSTALL_UDEV_RULES=ON -DDETACH_KERNEL_DRIVER=ON \
   && make \
   && make install \
   && ldconfig
 
-RUN echo "dvb_usb_rtl28xxu" >> /etc/modprobe.d/blacklist
+# RUN echo "dvb_usb_rtl28xxu" >> /etc/modprobe.d/blacklist
 
 # entrypoint config
 COPY sdr.sh /sdr.sh
