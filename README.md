@@ -1,7 +1,7 @@
 # Docker SDR Toolbox
 Docker container for SDR toys
 
-The SDR dongle is typically a USB device. Run the container in privelidged mode to access the host's USB device. 
+The SDR dongle is typically a USB device. Run the container in priviledged mode to access the host's USB device. 
 
 # Requirements
 - A SDR USB Dongle, with antenna
