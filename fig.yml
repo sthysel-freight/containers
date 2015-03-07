@@ -2,4 +2,6 @@ adssdr:
   build: .
   privileged: true
   volumes:
-      - /dev/bus/usb:/dev/bus/usb
+    - /dev/bus/usb:/dev/bus/usb
+  ports:
+    - "1234:1234"

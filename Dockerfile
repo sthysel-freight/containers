@@ -11,18 +11,19 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   build-essential \
   cmake \
   libusb-1.0-0-dev \
-  git
+  git \
+  pkg-config
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 
 RUN addgroup --gid 1000 radioman 
 RUN adduser --disabled-password --home /data --no-create-home --system -q --uid 1000 --ingroup radioman radioman
 
-RUN mkdir /data && mkdir /build/ && mkdir /app
+RUN mkdir /data && mkdir /build/ 
 
 RUN chown radioman:radioman /data
 
-# Install sdr
+# sdr
 WORKDIR /build/
 RUN git clone git://git.osmocom.org/rtl-sdr.git \
   && cd ./rtl-sdr \
@@ -33,11 +34,24 @@ RUN git clone git://git.osmocom.org/rtl-sdr.git \
   && make install \
   && ldconfig
 
+# dump 1090
+WORKDIR /build/
+RUN git clone git://github.com/MalcolmRobb/dump1090.git \
+  && cd dump1090 \
+  && make 
+
 # RUN echo "dvb_usb_rtl28xxu" >> /etc/modprobe.d/blacklist
 
 # entrypoint config
 COPY sdr.sh /sdr.sh
 RUN chmod +x /sdr.sh
+
+# rtl_tcp port
+EXPOSE 1234
+# dump 1090 ports
+EXPOSE 8080
+EXPOSE 30001 
+EXPOSE 30002
 
 ENTRYPOINT ["/sdr.sh"]
 CMD ["test"]
