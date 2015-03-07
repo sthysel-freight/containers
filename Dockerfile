@@ -1,8 +1,8 @@
 FROM ubuntu:latest
 MAINTAINER sthysel <sthysel@gmail.com>
-ENV REFRESHED_AT 2015-02-09
+ENV REFRESHED_AT 2015-03-06
 
-ENV HOME /root
+ENV HOME /radioman
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
@@ -11,13 +11,25 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN sed 's/main$/main universe/' -i /etc/apt/sources.list
 
-RUN apt-get update && apt-get install -y --no-install-recommends language-pack-en 
-RUN locale-gen en_US 
 RUN apt-get update && apt-get install -y --no-install-recommends \
   apt-transport-https \
   build-essential \
-  ca-certificates 
+  cmake \
+  libusb-1.0-0-dev \
+  git
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# Install sdr
+RUN mkdir /build/
+WORKDIR /build/
+RUN git clone git://git.osmocom.org/rtl-sdr.git \
+  && cd ./rtl-sdr \
+  && mkdir build \
+  && cd build \
+  && cmake ../ -DINSTALL_UDEV_RULES=ON \
+  && make \
+  && make install \
+  && ldconfig
 
 
 RUN addgroup --gid 1000 radioman 
