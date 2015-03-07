@@ -19,8 +19,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   git
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+
+RUN addgroup --gid 1000 radioman 
+RUN adduser --disabled-password --home /data --no-create-home --system -q --uid 1000 --ingroup radioman radioman
+
+RUN mkdir /data && mkdir /build/ && mkdir /app
+
+RUN chown radioman:radioman /data
+
 # Install sdr
-RUN mkdir /build/
 WORKDIR /build/
 RUN git clone git://git.osmocom.org/rtl-sdr.git \
   && cd ./rtl-sdr \
@@ -31,9 +38,11 @@ RUN git clone git://git.osmocom.org/rtl-sdr.git \
   && make install \
   && ldconfig
 
+RUN echo "dvb_usb_rtl28xxu" >> /etc/modprobe.d/blacklist
 
-RUN addgroup --gid 1000 radioman 
-RUN adduser --disabled-password --home /data --no-create-home --system -q --uid 1000 --ingroup radioman radioman
-RUN mkdir /data 
-RUN chown radioman:radioman /data
+# entrypoint config
+COPY sdr.sh /sdr.sh
+RUN chmod +x /sdr.sh
 
+ENTRYPOINT ["/sdr.sh"]
+CMD ["test"]
