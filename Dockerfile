@@ -6,4 +6,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
    mednafen
 
 ENV DISPLAY :0
-CMD ["/usr/src/mednafen"]
+
+CMD ["/usr/games/mednafen"]
