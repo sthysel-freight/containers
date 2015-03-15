@@ -13,9 +13,13 @@ ENV SRC /src/
 RUN mkdir -p ${SRC}/
 WORKDIR ${SRC}
 RUN git clone https://github.com/mofarrell/p2pvc.git 
-RUN cd p2pvc; make
+RUN cd p2pvc && make
+
 
 EXPOSE 55555
 EXPOSE 55556
 
-CMD["/src/p2pvc/p2pvc", "127.0.0.1", "-v"]
+COPY ./epoint.sh /epoint.sh
+
+ENTRYPOINT ["/epoint.sh"]
+CMD ["test"]
