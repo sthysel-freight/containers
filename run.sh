@@ -1,6 +1,7 @@
 #!/bin/bash
 
-docker run -i -t --privileged tchat
+docker pull sthysel/p2pvc
+docker run -i -t --privileged sthysel/p2pvc
 
 reset
 clear
