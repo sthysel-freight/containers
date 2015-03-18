@@ -4,6 +4,7 @@ MAINTAINER sthysel@gmail.com
 ENV REFRESHED_AT 2015-02-09
 
 RUN apt-get update && apt-get install -y \
+    libportaudio-dev \
     ncurses-dev \
     libopencv-dev \
     libpulse-dev \
