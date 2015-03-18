@@ -10,7 +10,8 @@ The SDR dongle is typically a USB device. Run the container in priviledged mode 
 
 ## Getting started
 
-Fetch the image from dockerhub:
+Fetch the image from dockerhub
+
 ```
 $ docker pull sthysel/ads-sdr
 ```
