@@ -1,7 +1,7 @@
 # docker-toolbox
-Sweet container for tooling around in
+Sweet container for tooling around in.
 
-use with handy bash function like so:
+Use with handy bash function like so:
 ``` bash
 newbox() {
     docker run --name $1 --volumes-from=volume_container -it \
