@@ -1,6 +1,7 @@
 # docker-toolbox
 Sweet container for tooling around in.
 
+
 Use with handy bash function like so:
 ``` bash
 newbox() {
@@ -14,3 +15,5 @@ newbox() {
     -e BOX_NAME=$1 sthysel/toolbox 
 }
 ```
+
+The `newbox` bash function above links in everything relevant configured in the host.
