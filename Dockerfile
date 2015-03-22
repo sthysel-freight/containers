@@ -10,7 +10,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   git \
   tree \
   vim \
-  wireshark
+  wireshark \
+  ssh
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # home env
