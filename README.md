@@ -1,8 +1,7 @@
-# docker-toolbox
+# docker toolbox
 Sweet container for tooling around in.
 
-
-Use with handy bash function like so:
+Easiest way to use a toolbox conatainer like this is to add a create utility function to .bashrc or similar:
 ``` bash
 newbox() {
     echo "Spinning up $1"
@@ -16,4 +15,13 @@ newbox() {
 }
 ```
 
-The `newbox` bash function above links in everything relevant configured in the host.
+The `newbox` bash function above links in everything relevant configured in the host. So the normal dev environment with all 
+your settings and tunings are available in the container.
+
+# Sample run
+
+``` bash
+thys@thysxps:~$ newbox tanya
+Spinning up tanya
+dev@tanya:~$
+```
