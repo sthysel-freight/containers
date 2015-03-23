@@ -1,7 +1,7 @@
 # docker toolbox
 Sweet container for tooling around in.
 
-Easiest way to use a toolbox conatainer like this is to add a create utility function to .bashrc or similar:
+Easiest way to use a toolbox container like this is to add a create utility function to .bashrc or similar:
 ``` bash
 newbox() {
     echo "Spinning up $1"
