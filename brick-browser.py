@@ -1,12 +1,12 @@
 from gi.repository import Gtk, GLib
-from gi.repository import WebKit2
+from gi.repository import WebKit
 
 class  ReloadView:
     def __init__(self):
         window = Gtk.Window()
         window.connect('delete-event',Gtk.main_quit)
 
-        self.view = WebKit2.WebView()
+        self.view = WebKit.WebView()
         self.view.load_uri('http://example.net')
         GLib.timeout_add_seconds(5, self.reload) #every 5 seconds
 
