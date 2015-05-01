@@ -11,7 +11,7 @@ class  ReloadView:
         GLib.timeout_add_seconds(5, self.reload) #every 5 seconds
 
         window.add(self.view)
-        window.fullscreen()
+        # window.fullscreen()
         window.show_all()
 
     def reload(self):

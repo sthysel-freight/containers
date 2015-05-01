@@ -1,4 +1,4 @@
-FROM python:3-onbuild 
+FROM python:2.7-onbuild 
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y --no-install-recommends \
