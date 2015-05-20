@@ -1,0 +1,7 @@
+jenkinsdocker:
+  build: .
+  name: jenkinsdocker
+  hostname: jenkinsdocker
+  privileged: true
+  ports:
+    - "8080:8080"
