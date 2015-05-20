@@ -1,0 +1,7 @@
+weewx:
+  build: .
+  privileged: true
+  volumes:
+    - /dev/bus/usb:/dev/bus/usb
+  ports:
+    - "8080:8080"
