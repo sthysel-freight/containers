@@ -12,7 +12,7 @@
 #   sthysel/spotify
 #
 FROM ubuntu:14.04
-MAINTAINER <sthysel@gmail.com>
+MAINTAINER sthysel <sthysel@gmail.com>
 
 ENV REFRESHED_AT 2015-05-20
 
