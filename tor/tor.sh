@@ -8,4 +8,4 @@ docker run -it --rm \
   -v /dev/snd:/dev/snd \
   --privileged \
   --name torb \
-  sthysel/torb
+  sthysel/tor
