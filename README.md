@@ -33,7 +33,7 @@ Javascript that intense is going to dent your soul.
 Possibly the only usefull thing here. 
 
 ## [tor](tor/)
-Pry loose the man's dearh grip on your private parts.
+Pry loose the man's death grip on your private parts. Or try anyway.
 
 ## [weewx](weewx/)
 Weather box.
