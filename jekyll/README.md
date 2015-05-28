@@ -6,7 +6,7 @@ sudo docker run --rm -v "$PWD:/src" sthysel/jekyll build
 ```
 
 ```
-alias jekyll='sudo docker run --rm -v "$PWD:/src" -p 4000:4000 sthysel/jekyll'
+alias jekyll='docker run --rm -v "$PWD:/src" -p 4000:4000 sthysel/jekyll'
 jekyll build
 jekyll serve -H 0.0.0.0
 ```
