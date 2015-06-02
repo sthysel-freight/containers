@@ -5,7 +5,7 @@ Easiest way to use a toolbox container like this is to add a create utility func
 ``` bash
 newbox() {
     echo "Spinning up $1"
-    docker run --name $1 -it \
+    docker run --rm --name $1 -it \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v ${HOME}/.vimrc:/home/dev/.vimrc \
     -v ${HOME}/.vim:/home/dev/.vim \

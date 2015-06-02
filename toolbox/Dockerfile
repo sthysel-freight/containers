@@ -4,6 +4,7 @@ ENV REFRESHED_AT 2015-03-22
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y --no-install-recommends \
+  sudo \
   apt-transport-https \
   build-essential \
   cmake \
@@ -15,10 +16,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # home env
+RUN useradd -ms /bin/bash dev && echo "dev:dev" | chpasswd && adduser dev sudo
+
 ENV HOME /home/dev
-RUN useradd dev
-RUN mkdir ${HOME} && chown -R dev: ${HOME} 
 RUN mkdir -p ${HOME} ${HOME}/bin ${HOME}/include
 
 WORKDIR /home/dev
 USER dev
+CMD /bin/bash
