@@ -37,3 +37,6 @@ Pry loose the man's death grip on your private parts. Or try anyway.
 
 ## [weewx](weewx/)
 Weather box.
+
+## [wego](wego/)
+Cool terminal weather toy written in go, needs API key from worldweatheronline.
