@@ -1,4 +1,4 @@
-#  docker run -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY --device /dev/dri sthysel/teacup
+#  docker run -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY --device /dev/dri sthysel/glxtoys
 FROM debian:jessie
 MAINTAINER sthysel <sthysel@gmail.com> 
 
