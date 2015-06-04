@@ -20,7 +20,6 @@ RUN apt-get update && apt-get install -y \
 
 RUN git clone --recursive https://github.com/Swordfish90/cool-retro-term.git /src
 WORKDIR /src
-RUN qmake \
-    && make
+RUN qmake && make
 
 ENTRYPOINT [ "/src/cool-retro-term" ]
