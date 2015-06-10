@@ -1,0 +1,10 @@
+FROM python:3
+MAINTAINER sthysel <sthysel@gmail.com>
+ENV REFRESHED_AT 2015-06-10
+
+RUN pip install awscli
+
+# just a reminder of what's needed
+ENV AMAZON_REGION=${AMAZON_REGION} AMAZON_ACCESS_KEY_ID=${AMAZON_ACCESS_KEY_ID} AMAZON_SECRET_ACCESS_KEY=${AMAZON_SECRET_ACCESS_KEY} 
+
+CMD ["aws"]

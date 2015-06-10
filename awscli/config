@@ -1,0 +1,5 @@
+[default]
+    output = json
+    region = $AMAZON_REGION$
+    aws_access_key_id = $AMAZON_ACCESS_KEY_ID$
+    aws_secret_access_key = $AMAZON_SECRET_ACCESS_KEY$
