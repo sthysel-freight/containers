@@ -40,3 +40,6 @@ Weather box.
 
 ## [wego](wego/)
 Cool terminal weather toy written in go, needs API key from worldweatheronline.
+
+## [chirp](chirp/)
+Manages boafeng short wave radio.
