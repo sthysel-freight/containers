@@ -13,5 +13,9 @@ RUN apt-get update && apt-get install -y \
         chirp-daily \
         --no-install-recommends
 
+# do the mkdir, volume tango to avoid permission issues
+RUN mkdir /data
+VOLUME /data
+
 CMD ["/usr/bin/chirpw"]
 
