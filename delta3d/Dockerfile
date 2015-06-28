@@ -25,12 +25,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   libcppunit-dev \
   libhawknl-dev \
   libgdal-dev \
-  libgnelib-dev \
+  #libgnelib-dev \
   libopenthreads-dev \
   libopenscenegraph-dev \
   plib1.8.4-dev \
   libxxf86vm-dev \
-  libopenal-devi \
+  libopenal-dev \
   libalut-dev \
   libphonon-dev \
   libboost-python-dev
