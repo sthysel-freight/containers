@@ -1,4 +1,4 @@
-dev:
+delta3dbuild:
     build: .
     volumes:
         - src/:/src

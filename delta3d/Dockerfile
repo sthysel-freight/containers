@@ -5,7 +5,6 @@ ENV REFRESHED_AT 2015-06-28
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y --no-install-recommends \
-  ttf-mscorefonts-installer \
   ca-certificates \
   apt-transport-https \
   build-essential \
