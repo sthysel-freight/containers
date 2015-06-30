@@ -1,0 +1,10 @@
+dev:
+    build: .
+    volumes:
+        - src/:/src
+    environment:
+        - DELTA_ROOT=/src/
+        - DELTA_DATA=${DELTA_ROOT}/data
+        - DELTA_INC=${DELTA_ROOT}/inc
+        - DELTA_LIB=${DELTA_ROOT}/build/lib
+        - LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${DELTA_LIB}
