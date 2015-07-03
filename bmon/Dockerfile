@@ -1,4 +1,4 @@
-# http://delta3d.org/deltawiki/index.php?title=Compiling_and_building_Delta3D_2.7.5_Developer_Release_in_Ubuntu_13.04_(64_bits)
+# https://github.com/tgraf/bmon/
 FROM ubuntu:latest
 MAINTAINER sthysel <sthysel@gmail.com>
 ENV REFRESHED_AT 2015-07-02
@@ -15,7 +15,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   libconfuse-dev \
   libnl-3-dev \
   libnl-route-3-dev \
-  libncurses-dev
+  libncurses-dev \
+  pkg-config
 
 WORKDIR /src/
 RUN git clone https://github.com/tgraf/bmon.git
