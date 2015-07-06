@@ -66,6 +66,10 @@ RUN sed -i 's/^[^#].*$/# &/' /etc/locale.gen && \
     locale-gen && \
     update-locale LANGUAGE=en_US:en LANG=en_US.UTF-8
 
+#RUN dpkg-reconfigure locales && \
+#    locale-gen C.UTF-8 && \
+#    /usr/sbin/update-locale LANG=C.UTF-8
+
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
