@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-VNU_JAR=/validator/build/vnu.jar
+VNU_JAR=/validator/validator/build/dist/vnu.jar
 
 if [ "$1" = 'serv' ]
 then
