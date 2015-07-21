@@ -1,2 +1,2 @@
 # brick-browser
-Simple Browser
+Very simple browser. I mean, simple...
