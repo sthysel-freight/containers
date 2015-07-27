@@ -30,7 +30,6 @@ RUN apt-get install -y \
     python-numpy \
     python-scipy
 
-
 RUN cd /usr/lib/x86_64-linux-gnu
 RUN ln -s libhdf5_serial.so.8.0.2 libhdf5.so
 RUN ln -s libhdf5_serial_hl.so.8.0.2 libhdf5_hl.so
@@ -38,11 +37,10 @@ RUN ln -s libhdf5_serial_hl.so.8.0.2 libhdf5_hl.so
 # Caffe
 RUN git clone https://github.com/BVLC/caffe.git /caffe
 WORKDIR /caffe
-RUN cp Makefile.config.example Makefile.config
+ADD Makefile.config /caffe/Makefile.config
 
-# Enable CPU-only + openblas (faster than atlas)
-RUN sed -i 's/# CPU_ONLY/CPU_ONLY/g' Makefile.config
-RUN sed -i 's/BLAS := atlas/BLAS := open/g' Makefile.config
+# https://github.com/BVLC/caffe/issues/2347
+RUN find . -type f -exec sed -i -e 's^"hdf5.h"^"hdf5/serial/hdf5.h"^g' -e 's^"hdf5_hl.h"^"hdf5/serial/hdf5_hl.h"^g' '{}' \;
 
 # Caffe's Python dependencies...
 RUN pip install -r python/requirements.txt
