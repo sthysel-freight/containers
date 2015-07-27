@@ -2,6 +2,8 @@
 FROM debian:jessie 
 MAINTAINER <sthysel@gail.com> 
 
+ENV CONTAINER_VERSION 0.1
+
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive \
     apt-get install -y --no-install-recommends \
@@ -33,6 +35,7 @@ RUN apt-get install -y \
 RUN cd /usr/lib/x86_64-linux-gnu
 RUN ln -s libhdf5_serial.so.8.0.2 libhdf5.so
 RUN ln -s libhdf5_serial_hl.so.8.0.2 libhdf5_hl.so
+RUN ldconfig
 
 # Caffe
 RUN git clone https://github.com/BVLC/caffe.git /caffe
