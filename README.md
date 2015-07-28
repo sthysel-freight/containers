@@ -2,6 +2,9 @@
 
 A set of possibly usefull Docker images to amuse and tool arround with.
 
+## [deepdream](deepdream/)
+Google's deepdream.
+
 ## [brick-browser](brick-browser/)
 A kiosk type single-site browser, built in Python WebKit.
 
