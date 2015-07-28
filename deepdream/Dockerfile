@@ -32,7 +32,7 @@ RUN apt-get install -y \
     python-numpy \
     python-scipy
 
-RUN cd /usr/lib/x86_64-linux-gnu
+WORKDIR /usr/lib/x86_64-linux-gnu
 RUN ln -s libhdf5_serial.so.8.0.2 libhdf5.so
 RUN ln -s libhdf5_serial_hl.so.8.0.2 libhdf5_hl.so
 RUN ldconfig
