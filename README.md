@@ -1,4 +1,4 @@
-# containers
+# Docker containers 
 
 A set of possibly usefull Docker images to amuse and tool arround with.
 
@@ -46,3 +46,6 @@ Cool terminal weather toy written in go, needs API key from worldweatheronline.
 
 ## [chirp](chirp/)
 Manages boafeng short wave radio.
+
+## [rebol](rebol/)
+Rebol core container.
