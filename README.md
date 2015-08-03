@@ -2,6 +2,10 @@
 
 A set of possibly usefull Docker images to amuse and tool arround with.
 
+## [pandashells](pandasshells/)
+[pandasshells](https://github.com/robdmc/pandashells) environment.
+
+
 ## [deepdream](deepdream/)
 Google's deepdream.
 
