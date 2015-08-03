@@ -11,3 +11,10 @@ docker build -t sthysel/pandashells .
 ```
 docker pull sthysel/pandasshels
 ```
+
+## Usage
+```
+docker run -it -v ${pwd}/data:/data sthysel/pandashells
+```
+
+Work in /data.

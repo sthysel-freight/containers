@@ -28,3 +28,11 @@ RUN pip3 install pandashells
 RUN pip3 install matplotlib
 RUN pip3 install seaborn
 RUN pip3 install statsmodels
+
+VOLUME /data
+WORKDIR /data
+
+RUN groupadd -r po && useradd -r -g po po
+USER po
+
+CMD ["bash"]
