@@ -11,8 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN env --unset=DEBIAN_FRONTEND
 
 # WORKDIR is set to $GOPATH in master image
-WORKDIR ${GOPATH}/src/
-RUN git clone https://github.com/hashicorp/vault 
-WORKDIR ${GOPATH}/src/vault/
+RUN git clone https://github.com/hashicorp/vault ${GOPATH}/src/github.com/hashicorp/vault
+WORKDIR ${GOPATH}/src/github.com/hashicorp/vault
 RUN make bootstrap
-#RUN make dev
+RUN make dev
