@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   ssh \
   silversearcher-ag
 
-RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apt-get clean && rm -rf /tmp/* /var/tmp/*
 
 # home env
 RUN useradd -ms /bin/bash dev && echo "dev:dev" | chpasswd && adduser dev sudo
