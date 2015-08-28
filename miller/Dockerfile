@@ -17,4 +17,4 @@ RUN env --unset=DEBIAN_FRONTEND
 RUN mkdir /src/
 WORKDIR /src/
 RUN git clone https://github.com/johnkerl/miller.git
-RUN cd ./miller/ && make c
+# RUN cd ./miller/ && make c
