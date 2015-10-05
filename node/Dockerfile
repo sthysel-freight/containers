@@ -16,3 +16,4 @@ RUN mkdir -p ${NVM_DIR}
 
 RUN wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.28.0/install.sh | bash
 
+RUN /bin/bash -c "source /nvm/nvm.sh; nvm install stable; nvm install unstable"
