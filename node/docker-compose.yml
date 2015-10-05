@@ -1,0 +1,4 @@
+noderunner:
+    build: .
+    hostname: noderunner
+    name: noderunner
