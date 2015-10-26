@@ -24,7 +24,7 @@ from_docker() {
   echo "Remember to logout and login for bash completion to be loaded."
 }
 
-from_ubuntu() {
+from_ubuntu_old() {
   # Install kernel extra's to enable docker aufs support
   sudo apt-get -y install linux-image-extra-$(uname -r)
 
@@ -38,6 +38,17 @@ from_ubuntu() {
   sudo sh -c "curl -L https://github.com/docker/compose/releases/download/${VERSION}/docker-compose-$(uname -s)-$(uname -m) > /usr/local/bin/docker-compose"
   sudo chmod +x /usr/local/bin/docker-compose
   sudo sh -c "curl -L https://raw.githubusercontent.com/docker/compose/${VERSION}/contrib/completion/bash/docker-compose > /etc/bash_completion.d/docker-compose"
+}
+
+from_ubuntu(){
+  # https://docs.docker.com/installation/ubuntulinux
+  sudo apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+  sudo rm  /etc/apt/sources.list.d/docker.list
+  sudo sh -c "echo deb https://apt.dockerproject.org/repo ubuntu-vivid main > /etc/apt/sources.list.d/docker.list" 
+  sudo apt-get update
+  sudo apt-get purge lxc-docker*
+  sudo apt-get install docker-engine
+  sudo systemctl enable docker
 }
 
 from_ubuntu
