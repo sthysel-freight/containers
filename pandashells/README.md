@@ -9,7 +9,7 @@ docker build -t sthysel/pandashells .
 
 ## Pull from Dockerhub
 ```
-docker pull sthysel/pandasshels
+docker pull sthysel/pandashels
 ```
 
 ## Usage
