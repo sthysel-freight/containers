@@ -12,9 +12,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN env --unset=DEBIAN_FRONTEND
 
-RUN mkdir /basespace
-WORKDIR /basespace
 RUN bash -c "$(curl -L https://basemount.basespace.illumina.com/install/)"
-
-VOLUME /data/
+VOLUME /data
+WORKDIR /data
 ENTRYPOINT ["basemount"]
