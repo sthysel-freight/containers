@@ -1,0 +1,25 @@
+#!/bin/bash
+#
+# Run basemount in a container
+#
+# This script will attempt to mirror the host paths by using volumes for the
+# following paths:
+#   * $(pwd)
+#   * $HOME if it's set
+#
+
+set -e
+
+VERSION="latest"
+IMAGE="sthysel/basemount:${VERSION}"
+
+# Setup volume mounts for  config and context
+VOLUMES="-v $(pwd):$(pwd)"
+
+if [ -n "$HOME" ]
+then
+    VOLUMES="${VOLUMES} -v $HOME:$HOME"
+fi
+
+
+exec docker run -it --rm --privileged=true ${VOLUMES} ${IMAGE} $@
