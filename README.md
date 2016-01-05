@@ -2,6 +2,16 @@
 
 A set of possibly usefull Docker images to amuse and tool arround with.
 
+## [awscli](awscli/)
+Amazon Web Services cli tools in a box.
+
+## [bmon](bmon/)
+tgraf/bmon bandwidth monitor and rate estimator.
+
+## [brick-browser](brick-browser/)
+A kiosk type single-site browser, built in Python WebKit.
+Its simple, very simple.
+
 ## [toolbox](toolbox/)
 Possibly the only usefull thing here. Spin up a container to quickly check something out without
 littering your base system with more useless rubbish.
@@ -14,9 +24,6 @@ A numerical analysis system popular among bio-informaticians and the like.
 ## [deepdream](deepdream/)
 Google's deepdream. Make trippy pics.
 
-## [brick-browser](brick-browser/)
-A kiosk type single-site browser, built in Python WebKit.
-Its simple, very simple.
 
 ## [jenkins](jenkins/)
 Continuous integration tool to delight the boss.
