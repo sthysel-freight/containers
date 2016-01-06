@@ -12,7 +12,7 @@ A set of possibly usefull Docker images to amuse and tool arround with.
 
 
 """
-entry_template="##[{0}]({0})/"
+entry_template="##[{0}]({0})"
 
 
 def get_description(dir):
