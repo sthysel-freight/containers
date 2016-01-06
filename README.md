@@ -1,70 +1,111 @@
-# Docker containers 
+
+# Docker containers
 
 A set of possibly usefull Docker images to amuse and tool arround with.
 
-## [awscli](awscli/)
-Amazon Web Services cli tools in a box.
 
-## [bmon](bmon/)
-tgraf/bmon bandwidth monitor and rate estimator.
+##[awscli](awscli)/
+Amazon Web Services cli tools
 
-## [brick-browser](brick-browser/)
-A kiosk type single-site browser, built in Python WebKit.
-Its simple, very simple.
+##[basemount](basemount)/
+A container for Illumina basemount
 
-## [toolbox](toolbox/)
-Possibly the only usefull thing here. Spin up a container to quickly check something out without
-littering your base system with more useless rubbish.
+##[bmon](bmon)/
+tgraf/bmon bandwidth monitor and rate estimator
 
-## [pandashells](pandasshells/)
-[pandasshells](https://github.com/robdmc/pandashells) environment.
+##[brick-browser](brick-browser)/
+brick-browser
 
-A numerical analysis system popular among bio-informaticians and the like.
+##[butterfly](butterfly)/
+Butterfly
 
-## [deepdream](deepdream/)
-Google's deepdream. Make trippy pics.
+##[calibre](calibre)/
+Calibre book management tool
+
+##[chirp](chirp)/
+Chirp radio programmer
+
+##[common](common)/
 
 
-## [jenkins](jenkins/)
-Continuous integration tool to delight the boss.
- 
-## [mednafen](mednafen/)
-Ye olde games container.
+##[deepdream](deepdream)/
+Google Deepdream
 
-## [p2pvc](p2pvc/)
-Peer to peer text based video chat, because we can.
+##[delta3d](delta3d)/
 
-## [retroterm](retroterm/)
-Nostalgic retro computing for hipsters, neckbeards and other asorted basket-weavers.
 
-## [sdr](sdr/)
-Software defined radio toolbox.
+##[glxtoys](glxtoys)/
 
-## [sedge](sedge/)
-Get a grip on that pesky .ssh/config and its sea of rusty keys.
 
-## [skype](skype/)
-Dial from a box.
+##[jekyll](jekyll)/
+Jekyll container
 
-## [spotify](spotify/)
-Javascript that intense is going to dent your soul.
+##[jenkins](jenkins)/
+In which you find a Docker image, hosting Jenkins with docker
 
-## [tor](tor/)
-Pry loose the man's death grip on your private parts. Or try anyway.
+##[latex](latex)/
+LaTex in a box
 
-## [weewx](weewx/)
-Weather box.
+##[linuxperf](linuxperf)/
 
-## [wego](wego/)
-Cool terminal weather toy written in go, needs API key from worldweatheronline.
 
-## [chirp](chirp/)
-Manages boafeng short wave radio.
+##[mednafen](mednafen)/
+docker-mednafen
 
-## [rebol](rebol/)
-Rebol core container.
+##[miller](miller)/
+miller csv tool
 
-## [wine dos compatability layer](wine/)
-Wine and xvfb, to get you DOS on.
+##[n2048](n2048)/
+
+
+##[node](node)/
+nvm (node version manager) managed node install
+
+##[nuhtml](nuhtml)/
+Container for https://validator.nu/
+
+##[p2pvc](p2pvc)/
+docker p2pvc
+
+##[pandashells](pandashells)/
+pandashells container
+
+##[rebol](rebol)/
+Rebol Core
+
+##[retroterm](retroterm)/
+hipster terminal
+
+##[sdr](sdr)/
+Docker SDR Toolbox
+
+##[sedge](sedge)/
+A container for sedge, the .ssh/config maintainer
+
+##[skype](skype)/
+
+
+##[spotify](spotify)/
+
+
+##[toolbox](toolbox)/
+docker toolbox
+
+##[tor](tor)/
+tor browser
+
+##[vault](vault)/
+
+
+##[weewx](weewx)/
+docker-weewx
+
+##[wego](wego)/
+Go Weather Container
+
+##[wine](wine)/
+wine
+
+##[youtubedl](youtubedl)/
 
 

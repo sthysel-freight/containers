@@ -1,4 +1,5 @@
-# awscli
+# Amazon Web Services cli tools
 
 Amazon Web Service's cli tools in a container.
-Provide the necessary creads in the config file.
+
+Provide the necessary creds in the config file.
