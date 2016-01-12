@@ -1,9 +1,9 @@
 # sthysel/python
-FROM debian:jessie
+FROM debian:wheezy
+ENV REFRESHED_AT 2016-01-06
 
-MAINTAINER sthysel <sthysel@gmail.com>
+MAINTAINER https://github.com/sthysel/containers/tree/master/common/python
 
-ENV REFRESHED_AT 2015-07-06
 
 RUN apt-get update && apt-get install -y \
     build-essential \

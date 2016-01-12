@@ -7,6 +7,9 @@ A set of possibly usefull Docker images to amuse and tool arround with.
 ##[awscli](awscli)
 Amazon Web Services cli tools
 
+##[azure](azure)
+azure cli
+
 ##[basemount](basemount)
 A container for Illumina basemount
 
