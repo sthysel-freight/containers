@@ -3,7 +3,7 @@
 import os
 
 excludes = [".git"]
-outfile_name = "README.md.new"
+outfile_name = "README.md"
 
 readme_header="""
 # Docker containers
