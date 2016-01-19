@@ -6,6 +6,6 @@ EXPOSE 8080
 COPY requirements.txt /requirements.txt
 RUN pip3 install --user -r /requirements.txt 
 
-COPY ./app/ /app
+VOLUME /app
 
 CMD ["python", "/app/square.py"]
