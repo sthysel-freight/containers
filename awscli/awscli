@@ -3,7 +3,7 @@
 set -e
 
 VERSION="latest"
-IMAGE="muccg/awscli:$VERSION"
+IMAGE="sthysel/awscli:$VERSION"
 
 
 # Setup options for connecting to docker host
