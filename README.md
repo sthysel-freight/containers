@@ -37,6 +37,9 @@ Google Deepdream
 ##[delta3d](delta3d)
 Delta3D docker based build environment
 
+##[flask](flask)
+Basic Flask sample app
+
 ##[glxtoys](glxtoys)
 GLXToys container
 
@@ -90,6 +93,9 @@ Skype telephone box
 
 ##[spotify](spotify)
 spotify web audio
+
+##[taskjuggler](taskjuggler)
+docker-taskjuggler
 
 ##[toolbox](toolbox)
 docker toolbox
