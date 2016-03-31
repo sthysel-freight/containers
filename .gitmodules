@@ -1,3 +1,6 @@
 [submodule "taskjuggler"]
 	path = taskjuggler
 	url = git@github.com:sthysel/docker-taskjuggler.git
+[submodule "neovim"]
+	path = neovim
+	url = git@github.com:sthysel/docker-neovim.git
