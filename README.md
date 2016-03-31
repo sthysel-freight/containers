@@ -42,7 +42,9 @@ xhost +; docker run -it --rm  -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$D
 ```
 
 ##[neovim](http://github.com/sthysel/docker-neovim.git)
-nvimbox
+docker-neovim
+
+Neovim in a docker container, with a bunch of usefull plugins.
 
 ##[spotify](spotify)
 spotify web audio 
