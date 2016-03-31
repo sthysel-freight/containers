@@ -2,10 +2,6 @@
 
 set -e
 
-readonly PROGNAME=$(basename $0)
-readonly PROGDIR=$(readlink -m $(dirname $0))
-readonly ARGS="$@"
-
 : ${BUTTERFLY_PORT:="9191"}
 
 exec docker run \
