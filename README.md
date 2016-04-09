@@ -26,9 +26,6 @@ Curses 2048 puzzle game
 
 http://dettus.net/n2048/
 
-##[youtubedl](youtubedl)
-Download YouTube vids
-
 ##[skype](skype)
 Skype telephone box
 
@@ -171,6 +168,11 @@ Common containers
 
 Some of the other containers hers may inherrit fromm these.
 
+##[mednafen](mednafen)
+docker-mednafen
+
+Docker container for mednafen emulator suite.
+
 ##[node](node)
 nvm (node version manager) managed node install
 
@@ -281,11 +283,6 @@ Chirp radio programmer
 
 Used to tune my many boafengs.
 
-##[mednafen](mednafen)
-docker-mednafen
-
-Docker container for mednafen emulator suite.
-
 ##[toolbox](toolbox)
 docker toolbox
 Sweet container for tooling around in.
@@ -370,6 +367,19 @@ Delta3D docker based build environment
 
 http://delta3d.org/
 
+##[docker-mathics](http://github.com/sthysel/docker-mathics.git)
+Mathics docker container
+
+General docker container that hosts [Mathics](https://github.com/mathics/Mathics).
+
+ Make
+
+See makefile
+```
+$ make build
+$ make testrun
+```
+
 ##[tor](tor)
 tor browser
 
@@ -429,6 +439,9 @@ CLI tools to get to Microsofts azure cloud.
 
 ##[vault](vault)
 vault secrets server
+
+##[docker-youtube-dl](http://github.com/sthysel/docker-youtube-dl.git)
+Download YouTube vids
 
 ##[awscli](awscli)
 Amazon Web Services cli tools

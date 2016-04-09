@@ -4,3 +4,11 @@
 [submodule "neovim"]
 	path = neovim
 	url = git@github.com:sthysel/docker-neovim.git
+[submodule "docker-mathics"]
+	path = docker-mathics
+	url = git@github.com:sthysel/docker-mathics.git
+	branch = master
+[submodule "docker-youtube-dl"]
+	path = docker-youtube-dl
+	url = git@github.com:sthysel/docker-youtube-dl.git
+	branch = master
