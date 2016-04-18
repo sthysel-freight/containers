@@ -17,3 +17,4 @@
 [submodule "docker-haxornews"]
 	path = docker-haxornews
 	url = git@github.com:sthysel/docker-haxornews.git
+	branch = master
