@@ -21,10 +21,9 @@ Butterfly is a xterm compatible terminal that runs in your browser.
 
 https://github.com/paradoxxxzero/butterfly
 
-##[n2048](n2048)
-Curses 2048 puzzle game
-
-http://dettus.net/n2048/
+##[miller](miller)
+miller csv tool
+https://github.com/johnkerl/miller
 
 ##[skype](skype)
 Skype telephone box
@@ -81,6 +80,18 @@ Basic Flask sample app
  docker run -p 80:8080 --rm sthysel/flask
 ```
 
+##[docker-haxornews](http://github.com/sthysel/docker-haxornews.git)
+Container for [haxor-news]( https://github.com/donnemartin/haxor-news)
+
+Put the *haxornews* script in the PATH and it will download the container if not locally available.
+
+ Makefile
+```
+$ make 
+```
+
+Will build the container locally from scratch using the latest hacker-news from pypi.
+
 ##[calibre](calibre)
 Calibre book management tool
 
@@ -88,9 +99,10 @@ Calibre book management tool
 Rebol Core
 http://www.rebol.com/
 
-##[miller](miller)
-miller csv tool
-https://github.com/johnkerl/miller
+##[n2048](n2048)
+Curses 2048 puzzle game
+
+http://dettus.net/n2048/
 
 ##[jenkins](jenkins)
 In which you find a Docker image, hosting Jenkins with docker 

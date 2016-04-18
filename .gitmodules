@@ -1,9 +1,11 @@
 [submodule "taskjuggler"]
 	path = taskjuggler
 	url = git@github.com:sthysel/docker-taskjuggler.git
+	branch = master
 [submodule "neovim"]
 	path = neovim
 	url = git@github.com:sthysel/docker-neovim.git
+	branch = master
 [submodule "docker-mathics"]
 	path = docker-mathics
 	url = git@github.com:sthysel/docker-mathics.git
@@ -12,3 +14,6 @@
 	path = docker-youtube-dl
 	url = git@github.com:sthysel/docker-youtube-dl.git
 	branch = master
+[submodule "docker-haxornews"]
+	path = docker-haxornews
+	url = git@github.com:sthysel/docker-haxornews.git
